@@ -1,0 +1,26 @@
+﻿@model NeymarToBitcoin.Models.Price
+@{
+    ViewData["Title"] = "Home Page";
+}
+<link href="~/css/site.css" rel="stylesheet" />
+
+
+    <form asp-controller="Home" asp-action="Index" class="form-inline" method="get">
+            <div class="form-group">
+                <label asp-for="Currency" ></label>
+                <select type="text" name="currency" asp-items="Html.GetEnumSelectList<Currencies>()">
+                    <option selected="selected" value="">Select currency</option>
+                </select>
+            </div>
+                <input type="submit" value="Get Price" />
+        </form>
+
+
+
+    <p>@Html.DisplayFor(modelItem => Model.PlayerName)</p>
+    <p>@Html.DisplayFor(modelItem => Model.BitcoinPrice)</p>
+    <p>@Html.DisplayFor(modelItem => Model.Currency)</p>
+    <p>@Html.DisplayFor(modelItem => Model.CurrencyPrice)</p>
+
+
+
