@@ -9,3 +9,14 @@ C:\Users\Jonathan\source\repos\NeymarToBitcoin\NeymarToBitcoin\obj\Debug\netcore
 C:\Users\Jonathan\source\repos\NeymarToBitcoin\NeymarToBitcoin\obj\Debug\netcoreapp2.0\NeymarToBitcoin.AssemblyInfo.cs
 C:\Users\Jonathan\source\repos\NeymarToBitcoin\NeymarToBitcoin\obj\Debug\netcoreapp2.0\NeymarToBitcoin.dll
 C:\Users\Jonathan\source\repos\NeymarToBitcoin\NeymarToBitcoin\obj\Debug\netcoreapp2.0\NeymarToBitcoin.pdb
+C:\Users\inter\OneDrive\Documents\NeymarToBitcoin\NeymarToBitcoin\bin\Debug\netcoreapp2.0\NeymarToBitcoin.deps.json
+C:\Users\inter\OneDrive\Documents\NeymarToBitcoin\NeymarToBitcoin\bin\Debug\netcoreapp2.0\NeymarToBitcoin.runtimeconfig.json
+C:\Users\inter\OneDrive\Documents\NeymarToBitcoin\NeymarToBitcoin\bin\Debug\netcoreapp2.0\NeymarToBitcoin.runtimeconfig.dev.json
+C:\Users\inter\OneDrive\Documents\NeymarToBitcoin\NeymarToBitcoin\bin\Debug\netcoreapp2.0\NeymarToBitcoin.dll
+C:\Users\inter\OneDrive\Documents\NeymarToBitcoin\NeymarToBitcoin\bin\Debug\netcoreapp2.0\NeymarToBitcoin.pdb
+C:\Users\inter\OneDrive\Documents\NeymarToBitcoin\NeymarToBitcoin\obj\Debug\netcoreapp2.0\NeymarToBitcoin.csprojResolveAssemblyReference.cache
+C:\Users\inter\OneDrive\Documents\NeymarToBitcoin\NeymarToBitcoin\obj\Debug\netcoreapp2.0\NeymarToBitcoin.csproj.CoreCompileInputs.cache
+C:\Users\inter\OneDrive\Documents\NeymarToBitcoin\NeymarToBitcoin\obj\Debug\netcoreapp2.0\NeymarToBitcoin.AssemblyInfoInputs.cache
+C:\Users\inter\OneDrive\Documents\NeymarToBitcoin\NeymarToBitcoin\obj\Debug\netcoreapp2.0\NeymarToBitcoin.AssemblyInfo.cs
+C:\Users\inter\OneDrive\Documents\NeymarToBitcoin\NeymarToBitcoin\obj\Debug\netcoreapp2.0\NeymarToBitcoin.dll
+C:\Users\inter\OneDrive\Documents\NeymarToBitcoin\NeymarToBitcoin\obj\Debug\netcoreapp2.0\NeymarToBitcoin.pdb

@@ -4,23 +4,47 @@
 }
 <link href="~/css/site.css" rel="stylesheet" />
 
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4 content">
 
-    <form asp-controller="Home" asp-action="Index" class="form-inline" method="get">
-            <div class="form-group">
-                <label asp-for="Currency" ></label>
-                <select type="text" name="currency" asp-items="Html.GetEnumSelectList<Currencies>()">
-                    <option selected="selected" value="">Select currency</option>
-                </select>
-            </div>
-                <input type="submit" value="Get Price" />
-        </form>
+            <p class="title">Convert Neymar's transfer fee to PSG to bitcoin in your currency</p>
+
+            <hr />
+
+                <form asp-controller="Home" asp-action="Index" class="form-inline" method="get">
+                    <div class="form-group">
+                        <select id="soflow" type="text" name="currency" asp-items="Html.GetEnumSelectList<Currencies>()">
+                            <option selected="selected" value="">Select currency</option>
+                        </select>
+                    </div>
+                    <input type="submit" value="Vis" id="soflowBtn" />
+                </form>
+            
 
 
+                <p><span class="explanation">Spiller: </span> @Html.DisplayFor(modelItem => Model.PlayerName)</p>
+                <p><span class="explanation">Pris: </span> @Html.DisplayFor(modelItem => Model.CurrencyPrice)</p>
+                <p><span class="explanation">Bitcoin Pris: </span>@Html.DisplayFor(modelItem => Model.BitcoinPrice)</p>
 
-    <p>@Html.DisplayFor(modelItem => Model.PlayerName)</p>
-    <p>@Html.DisplayFor(modelItem => Model.BitcoinPrice)</p>
-    <p>@Html.DisplayFor(modelItem => Model.Currency)</p>
-    <p>@Html.DisplayFor(modelItem => Model.CurrencyPrice)</p>
+            <form asp-controller="Home" asp-action="Index">
+                <button class="btn btn-info refresh-btn" type="submit">
+                    <span class="glyphicon glyphicon-refresh"></span> Refresh
+                </button>
+            </form>
+
+            </div> 
+
+
+                <div class="fullscreen-bg">
+                    <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
+                        <source src="~/videos/neymarvideo.mp4" type="video/mp4" />
+                    </video>
+                </div>
+
+            
+    </div>
+</div>
 
 
 

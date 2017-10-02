@@ -8,7 +8,6 @@ namespace NeymarToBitcoin.Models
     public enum Currencies
     {
         USD,
-        JPY,
         EUR,
         GBP,
         DKK, 

@@ -14,17 +14,30 @@ namespace NeymarToBitcoin.Controllers
 
         public IActionResult Index()
         {
+
+            //showing USD as default
             string defaultCurrency = "USD";
+
+            double unformatedCurrency = client.GetValue(defaultCurrency) * 1000000;
+            string symbol = GetSymbol(defaultCurrency);
+
+            string formattedCurrency = String.Format("{0:N2}", unformatedCurrency) + " " + symbol;
+
+            double bitcoinPrice = client.GetPrice(defaultCurrency) * 1000000;
+            string bitcoinPriceFormatted = bitcoinPrice + " " + "\u0243";
+
             var model = new Price()
             {
-                PlayerName = "Neymar",
+                PlayerName = "Neymar Jr.",
                 Currency = defaultCurrency,
-                CurrencyPrice = client.GetValue(defaultCurrency),
-            };            
-            model.BitcoinPrice = client.GetPrice(defaultCurrency);
+                CurrencyPrice = formattedCurrency,
+                BitcoinPrice = bitcoinPriceFormatted,
+            };
+
 
             return View(model);
         }
+    
 
         [HttpGet, ActionName("Index")]
         public IActionResult IndexCurrency(int currency)
@@ -32,21 +45,57 @@ namespace NeymarToBitcoin.Controllers
             Currencies enumDisplayStatus = (Currencies)currency;
             string selectedCurrency = enumDisplayStatus.ToString();
 
+            double unformatedCurrency = client.GetValue(selectedCurrency) * 1000000;
+            string symbol = GetSymbol(selectedCurrency);
+
+            string formattedCurrency = String.Format("{0:N2}", unformatedCurrency) + " " + symbol;
+
+            double bitcoinPrice = client.GetPrice(selectedCurrency) * 1000000;
+            string bitcoinPriceFormatted = bitcoinPrice + " " + "\u0243";
+
+
+
             var model = new Price()
             {
-                PlayerName = "Neymar",
+                PlayerName = "Neymar Jr.",
                 Currency = selectedCurrency,
-                CurrencyPrice = client.GetValue(selectedCurrency),
+                CurrencyPrice = formattedCurrency,
+                BitcoinPrice = bitcoinPriceFormatted,
             };    
-            model.BitcoinPrice = client.GetPrice(selectedCurrency);
+            
 
             return View(model);
-
         }
 
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        private string GetSymbol(string currency)
+        {
+            string symbol = string.Empty;
+
+            switch (currency)
+            {
+                case "USD":
+                    symbol = "$";
+                    break;
+                case "EUR":
+                    symbol = "€";
+                    break;
+                case "GBP":
+                    symbol = "£";
+                    break;
+                case "DKK":
+                    symbol = "kr.";
+                    break;
+                default:
+                    symbol = "$";
+                    break;
+            }
+
+            return symbol;
         }
     }
 }
